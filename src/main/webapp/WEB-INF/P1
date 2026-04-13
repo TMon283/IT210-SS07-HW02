@@ -1,0 +1,9 @@
+- Việc lặp lại đoạn code model.addAttribute() ở cả 3 hàm GET
+đã vi phạm nguyên tắc DRY (Don't Repeat Yourself)
+
+- Nếu sau này mở rộng ra 20 trang giao diện đều cần danh sách "Nhóm món ăn",
+thì mỗi lần thay đổi logic (ví dụ thêm nhóm mới, đổi tên nhóm) sẽ
+phải sửa ở 20 chỗ khác nhau. Điều này dẫn đến:
+    + Rủi ro bảo trì cao: dễ bỏ sót, gây lỗi không đồng bộ.
+    + Controller phình to: mất tính gọn gàng, khó đọc, khó test.
+    + Khó mở rộng: mỗi lần thêm trang mới lại copy-paste đoạn code, không bền vững.
